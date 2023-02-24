@@ -1,4 +1,4 @@
-import React, {useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom';
 export const Register = () => {
     const NewUser = (e) => {
@@ -107,15 +107,15 @@ export const Register = () => {
         return;
 
     }
-    
+
     const [passwordShown, setPasswordShown] = useState(false);
     const showPassword = () => {
-      setPasswordShown(!passwordShown);
+        setPasswordShown(!passwordShown);
     }
 
     const [securityShown, setSecurityShown] = useState(false);
     const showSecurity = () => {
-      setSecurityShown(!securityShown);
+        setSecurityShown(!securityShown);
     }
 
     return (
@@ -156,7 +156,7 @@ export const Register = () => {
                     <div className="box">
                         <label htmlFor="securityPin">Security Pin :</label>
                         <div className="innerBox">
-                            <input type={securityShown ? 'text':'password'} name="security" id="securitypin" readOnly />
+                            <input type={securityShown ? 'text' : 'password'} name="security" id="securitypin" readOnly />
                             <i className='bx bx-show' id="eye" onClick={showSecurity}></i>
                             <button type="button" id="refresh" onClick={CaptchaShow}>Press for security</button>
                         </div>
@@ -165,11 +165,11 @@ export const Register = () => {
                     <br />
                     <div className="box">
 
-                    <Link to={"/"}>
-                        <button className="submit btn" type="button" id="registerLogin"
-                        >
-                            Login
-                        </button>
+                        <Link to={"/"}>
+                            <button className="submit btn" type="button" id="registerLogin"
+                            >
+                                Login
+                            </button>
                         </Link>
 
                         <button className="reset btn" type="submit" id="registerSign">Sign Up</button>

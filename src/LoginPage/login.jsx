@@ -40,6 +40,10 @@ export const Login = () => {
   const showPassword = () => {
     setPasswordShown(!passwordShown);
   }
+  const [securityShown, setSecurityShown] = useState(false);
+  const showSecurity = () => {
+      setSecurityShown(!securityShown);
+  }
 
   return (
     <>
@@ -69,9 +73,9 @@ export const Login = () => {
             <div className="box">
               <label htmlFor="securityPin">Security Pin :</label>
               <div className="innerBox">
-                <input type="password" name="security" id="securityPin" placeholder="Enter Security" />
+                <input type={securityShown?'text':'password'} name="security" id="securityPin" placeholder="Enter Security" />
 
-                <i className='bx bx-show' id="eye_security-login"></i>
+                <i className='bx bx-show' id="eye_security-login" onClick={showSecurity}></i>
 
               </div>
             </div>
